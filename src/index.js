@@ -5,10 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import HelloWorld from './component/HelloWorld';
+import HelloWorld2 from './component/HelloWorld2'
+import Clock from './component/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<React.StrictMode>
+  <React.StrictMode>
     <HashRouter>
       <nav className="px-5 flex items-center h-[60px] bg-indigo-500 text-white">
         <h1 className="mr-auto text-2xl">React TodoList</h1>
@@ -17,13 +19,21 @@ root.render(
             <Link to="/" className="border p-3 hover:bg-indigo-600 duration-500">Home</Link>
           </li>
           <li>
-            <Link to="/todolist" className="border p-3 hover:bg-indigo-600 duration-500">ToDoList</Link>
+            <Link to="/HelloWorld" className="border p-3 hover:bg-indigo-600 duration-500">HelloWorld</Link>
+          </li>
+          <li>
+            <Link to="/HelloWorld2" className="border p-3 hover:bg-indigo-600 duration-500">HelloWorld2</Link>
+          </li>
+          <li>
+            <Link to="/clock" className="border p-3 hover:bg-indigo-600 duration-500">clock</Link>
           </li>
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={ <App /> } />
-        {<Route path="/HelloWorld" element={ <HelloWorld /> } />}
+        <Route path="/" element={<App />} />
+        {<Route path="/HelloWorld" element={<HelloWorld />} />}
+        {<Route path="/HelloWorld2" element={<HelloWorld2 />} />}
+        {<Route path="/clock" element={<Clock />} />}
       </Routes>
     </HashRouter>
   </React.StrictMode>
@@ -33,3 +43,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
