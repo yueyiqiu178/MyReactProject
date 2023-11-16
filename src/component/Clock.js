@@ -25,16 +25,16 @@ class Clock extends Component {
     }
     launchClock() {
         console.log("launchClock");
-        this.setState({ name: "Ken Yao" });
+        //this.setState({ name: "Ken Yao" });
         
-        setInterval(() => {
-            console.log('Updating time...');
-            this.setState({
-                currentTime: new Date().toLocaleString(),
-                name: "Jim Lee"
-            });
-            console.log(this.state.name)
-        }, 3000);
+        // setInterval(() => {
+        //     console.log('Updating time...');
+        //     this.setState({
+        //         currentTime: new Date().toLocaleString(),
+        //         name: "Jim Lee"
+        //     });
+        //     console.log(this.state.name)
+        // }, 3000);
     }
     render() {
         console.log('Rendering Clock...')

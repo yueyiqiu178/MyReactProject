@@ -7,6 +7,7 @@ import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import HelloWorld from './component/HelloWorld';
 import HelloWorld2 from './component/HelloWorld2'
 import Clock from './component/Clock';
+import TextAreaCounter from './component/TextAreaCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,7 +26,10 @@ root.render(
             <Link to="/HelloWorld2" className="border p-3 hover:bg-indigo-600 duration-500">HelloWorld2</Link>
           </li>
           <li>
-            <Link to="/clock" className="border p-3 hover:bg-indigo-600 duration-500">clock</Link>
+            <Link to="/clock" className="border p-3 hover:bg-indigo-600 duration-500">Clock</Link>
+          </li>
+          <li>
+            <Link to="/textAreaCounter" className="border p-3 hover:bg-indigo-600 duration-500">TextAreaCounter</Link>
           </li>
         </ul>
       </nav>
@@ -34,6 +38,7 @@ root.render(
         {<Route path="/HelloWorld" element={<HelloWorld />} />}
         {<Route path="/HelloWorld2" element={<HelloWorld2 />} />}
         {<Route path="/clock" element={<Clock />} />}
+        {<Route path="/textAreaCounter" element={<TextAreaCounter text="pcman" />} />}
       </Routes>
     </HashRouter>
   </React.StrictMode>
