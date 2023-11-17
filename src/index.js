@@ -8,6 +8,7 @@ import HelloWorld from './component/HelloWorld';
 import HelloWorld2 from './component/HelloWorld2'
 import Clock from './component/Clock';
 import TextAreaCounter from './component/TextAreaCounter';
+import InputCounter from './component/InputCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,6 +32,9 @@ root.render(
           <li>
             <Link to="/textAreaCounter" className="border p-3 hover:bg-indigo-600 duration-500">TextAreaCounter</Link>
           </li>
+          <li>
+            <Link to="/inputCounter" className="border p-3 hover:bg-indigo-600 duration-500">InputCounter</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -39,6 +43,7 @@ root.render(
         {<Route path="/HelloWorld2" element={<HelloWorld2 />} />}
         {<Route path="/clock" element={<Clock />} />}
         {<Route path="/textAreaCounter" element={<TextAreaCounter text="pcman" />} />}
+        {<Route path="/inputCounter" element={<InputCounter text="kkman" />} />}
       </Routes>
     </HashRouter>
   </React.StrictMode>

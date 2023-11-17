@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types';
 
-class TextAreaCounter extends Component {
+class InputCounter extends Component {
 
     static propTypes = {
         text: PropTypes.string.isRequired
@@ -16,11 +16,13 @@ class TextAreaCounter extends Component {
         super(props);
         this.state =
         {
-            iText: this.props.text,
+            iText: "",
+            iTextOri: "",
         }
     };
 
     _textChange(ev) {
+        console.log("textChange")
         this.setState({
             iText: ev.target.value,
         });
@@ -47,7 +49,15 @@ class TextAreaCounter extends Component {
 
     static getDerivedStateFromProps(props, state) {
         console.log("getDerivedStateFromProps");
-        return null;
+        console.log("props.text="+props.text);
+        console.log("state.iText="+state.iText);
+        if(props.text !== state.iText && state.iText === state.iTextOri){ 
+            return {
+                iText: props.text,
+            };
+        } else{
+            return null;
+        }
     }
 
     //before render
@@ -67,8 +77,12 @@ class TextAreaCounter extends Component {
 
     //update dom and state
 
-    componentDidUpdate() {
+    componentDidUpdate(oldProps, oldState, snapshot) {
         this._log('componentDidUpdate', arguments);
+        if (this.state.iText.length > 6) {
+            console.log('The text is too long, abort, abort!');
+            this.setState(oldState);
+          }
     }
 
 
@@ -83,10 +97,10 @@ class TextAreaCounter extends Component {
     render() {
         console.log("render")
         return <div>
-            <textarea value={this.state.iText} onChange={this._textChange.bind(this)}></textarea>
+            <input value={this.state.iText} onChange={this._textChange.bind(this)}></input>
             <h1>{this.state.iText.length}</h1>
         </div>
     }
 }
 
-export default TextAreaCounter
+export default InputCounter
