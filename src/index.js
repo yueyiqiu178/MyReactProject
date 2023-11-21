@@ -9,6 +9,7 @@ import HelloWorld2 from './component/HelloWorld2';
 import InputCounter from './component/InputCounter';
 import TextAreaCounter from './component/TextAreaCounter';
 import Users from './component/Users';
+import CounterR from './component/CounterR.js'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -127,6 +128,9 @@ root.render(
               <li class="nav-item">
                 <Link to="/ContentDock" className="nav-link active">ContentDock</Link>
               </li>
+              <li class="nav-item">
+                <Link to="/CounterR" className="nav-link active">CounterR</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -140,6 +144,7 @@ root.render(
         {<Route path="/inputCounter" element={<InputCounter text="kkman" />} />}
         {<Route path="/Users" element={<Users dataUrl={userJson} />} />}
         {<Route path="/ContentDock" element={<ContentDock />} />}
+        {<Route path="/CounterR" element={<CounterR />} />}
       </Routes>
     </HashRouter>
     </Provider>
