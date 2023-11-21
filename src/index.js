@@ -14,9 +14,9 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import store from './Store.js'
+import store from './redux/Store.js'
 import { Provider } from 'react-redux'
-
+import WinepadDock from './winepad/WinepadDock'
 let userJson = [{
   "id": 1,
   "first_name": "Patrick",
@@ -131,6 +131,9 @@ root.render(
               <li class="nav-item">
                 <Link to="/CounterR" className="nav-link active">CounterR</Link>
               </li>
+              <li class="nav-item">
+                <Link to="/WinepadDock" className="nav-link active">WinepadDock</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -145,6 +148,7 @@ root.render(
         {<Route path="/Users" element={<Users dataUrl={userJson} />} />}
         {<Route path="/ContentDock" element={<ContentDock />} />}
         {<Route path="/CounterR" element={<CounterR />} />}
+        {<Route path="/WinepadDock" element={<WinepadDock />} />}
       </Routes>
     </HashRouter>
     </Provider>

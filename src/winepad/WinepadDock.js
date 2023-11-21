@@ -1,7 +1,35 @@
-import React, { Component } from "react"
-import PropTypes from 'prop-types';
-import Logo from "./Logo"
+import React from "react";
+import Logo from "./component/Logo";
+import MyButton from './component/MyButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment, incrementByAmount, init } from '../redux/winepadSlice';
 
+function WinepadDock() {
+
+    console.log("WinepadDock")
+    const dispatch = useDispatch()
+
+    dispatch(init())
+
+    const value = useSelector((state) => state.winepad.value)
+    const wineList = useSelector((state) => state.winepad.wineList)
+
+    console.log(value)
+    console.log(wineList)
+
+    return (
+        <div>
+            <div className="app-header">
+                <Logo /> Welcome to Whinepad!
+                <MyButton href="polll">Hello</MyButton>
+            </div>
+        </div>
+    )
+}
+
+export default WinepadDock
+
+/*
 class WinepadDock extends Component {
 
     static propTypes = {
@@ -109,3 +137,5 @@ class WinepadDock extends Component {
 }
 
 export default WinepadDock
+
+*/
