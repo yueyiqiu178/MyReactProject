@@ -11,10 +11,10 @@ import TextAreaCounter from './component/TextAreaCounter';
 import Users from './component/Users';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-// Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import store from './Store.js'
+import { Provider } from 'react-redux'
 
 let userJson = [{
   "id": 1,
@@ -93,6 +93,7 @@ let userJson = [{
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <HashRouter>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -132,7 +133,7 @@ root.render(
       </nav>
       <Routes>
         <Route path="/" element={<App />} />
-        {<Route path="/HelloWorld" element={<HelloWorld />} />}
+        {<Route path="/HelloWorld" element={<HelloWorld text="HAHA"/>} />}
         {<Route path="/HelloWorld2" element={<HelloWorld2 />} />}
         {<Route path="/clock" element={<Clock />} />}
         {<Route path="/textAreaCounter" element={<TextAreaCounter text="pcman" />} />}
@@ -141,6 +142,7 @@ root.render(
         {<Route path="/ContentDock" element={<ContentDock />} />}
       </Routes>
     </HashRouter>
+    </Provider>
   </React.StrictMode>
 );
 

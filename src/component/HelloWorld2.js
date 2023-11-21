@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { ReactDOM } from 'react'
 import LanCom from './Lan'
 
 var helloWorldReactElement = <h1>Hello world!</h1>

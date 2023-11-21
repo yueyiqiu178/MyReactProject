@@ -82,6 +82,7 @@ class Content extends Component {
                 </button>
                 <Counter value={this.state.counter} />
                 <ClickCounterButton handler={this.handleClickP} counter={this.state.counter} />
+                {this.props.children}
             </div>)
     }
 }

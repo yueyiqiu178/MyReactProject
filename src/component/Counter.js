@@ -1,5 +1,6 @@
-import React, { Component } from "react"
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../counterSlice.js'
 
 class Counter extends Component {
 
