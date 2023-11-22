@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# React-Functional-Component-Hooks-Example
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## About
+
+This is a starter boilerplate app I've put together using the following technologies:
+
+* ~~Isomorphic~~ [Universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) rendering
+* Both client and server make calls to load data from separate API server
+* [React](https://github.com/facebook/react)
+* [React Router](https://github.com/rackt/react-router)
+* [Babel](http://babeljs.io) for ES6
+* [Webpack](http://webpack.github.io) for bundling
+* [Redux](https://github.com/rackt/redux)'s futuristic [Flux](https://facebook.github.io/react/blog/2014/05/06/flux.html) implementation
+* [https://getbootstrap.com/](https://getbootstrap.com/)  
+
 
 ## Available Scripts
 
