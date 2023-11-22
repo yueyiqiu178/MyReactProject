@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 
-This is a starter boilerplate app I've put together using the following technologies:
+This is a complete react functional component hooks example.This is a winepad project and I've put together using the following technologies:
 
 * [React](https://github.com/facebook/react)
 * [React Router](https://github.com/rackt/react-router)
