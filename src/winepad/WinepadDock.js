@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./component/Logo";
 import MyButton from './component/MyButton';
+import Winepad from "./component/Winepad";
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, incrementByAmount, init } from '../redux/winepadSlice';
 
@@ -21,7 +22,7 @@ function WinepadDock() {
         <div>
             <div className="app-header">
                 <Logo /> Welcome to Whinepad!
-                <MyButton href="polll">Hello</MyButton>
+                <Winepad></Winepad>
             </div>
         </div>
     )
