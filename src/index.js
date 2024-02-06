@@ -14,9 +14,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import store from './redux/Store.js'
-import { Provider } from 'react-redux'
-import WinepadDock from './winepad/WinepadDock'
+import store from './redux/Store.js';
+import { Provider } from 'react-redux';
+import WinepadDock from './winepad/WinepadDock';
+
 let userJson = [{
   "id": 1,
   "first_name": "Patrick",
